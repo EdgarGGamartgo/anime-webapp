@@ -1,11 +1,28 @@
 {
-  "name": "backend",
+  "name": "examen-desarrollo-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is just an exam for job validation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
-  "author": "Edgar Martinez",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgarGGamartgo/ExamenDesarrolloWeb.git"
+  },
+  "author": "Edgar Gabriel Martinez Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdgarGGamartgo/ExamenDesarrolloWeb/issues"
+  },
+  "homepage": "https://github.com/EdgarGGamartgo/ExamenDesarrolloWeb#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.9.27",
+    "validator": "^13.1.1"
+  }
 }
