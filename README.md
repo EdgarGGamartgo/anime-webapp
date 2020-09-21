@@ -1,6 +1,6 @@
 # anime-webapp
 
-Sprint #1 "Anime Redesign"
+"Anime Redesign"
 
 Actividades realizadas
 
@@ -30,7 +30,7 @@ BACK
 2. Dentro del mismo directorio ejecutar comando "npm start".
 
 FRONT
-1. Dentro del directorio "layouts" ejecutar comando "npm install" para descargar todas las dependencias necesarias para el projecto Front-End.
+1. Dentro del directorio "anime-redesign" ejecutar comando "npm install" para descargar todas las dependencias necesarias para el projecto Front-End.
 
 2. Dentro del mismo directorio ejecutar comando "npm start".
 
