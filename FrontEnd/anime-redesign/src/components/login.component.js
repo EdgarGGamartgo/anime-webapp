@@ -3,6 +3,8 @@ import axios from 'axios'
 import Info from "./info.component"
 import { UserProvider } from './userContext'
 import {withTranslation} from "react-i18next";
+import './../App.css';
+import './../index.css';
 
 
 class Login extends Component {

@@ -13,7 +13,11 @@
         "logout": "Log out",
         "age": "Your age is",
         "youremail": "Your email is",
-        "welcome": "Welcome"
+        "welcome": "Welcome",
+        "contact": "Contact",
+        "about": "About us",
+        "mynumber": "5566778881",
+        "myemail": "edgarggamartgo@gmail.com"
 
     }
 }

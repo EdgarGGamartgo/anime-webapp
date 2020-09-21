@@ -6,8 +6,7 @@ import './../App.css';
 import './../index.css';
 
 
-
-class Info extends Component {
+class About extends Component {
 
     constructor(props) {
         super(props);
@@ -16,6 +15,8 @@ class Info extends Component {
      
         };
     }
+
+    
 
     submitHandler = e => {
         e.preventDefault()
@@ -32,12 +33,10 @@ class Info extends Component {
                   {
                       (userInfo) => {
                       return <div>
-                                <div>{t('welcome.welcome')} {userInfo.user.name}</div>
-                                <div>{t('welcome.youremail')} {userInfo.user.email}</div>
-                                <div>{t('welcome.age')} {userInfo.user.age}</div>
-                                <form onSubmit={this.submitHandler}>
-                                     <button type="submit" className="btn btn-primary btn-block">{t('welcome.logout')}</button>
-                                </form>
+                                    <div>New to Animelon? Check out the video below for a quick introduction, or keep scrolling to see how everything works.</div>
+                                    <div>
+                                    <iframe width="1000" height="300" src="https://www.youtube.com/embed/meUmHCcjlcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                    </div>
                              </div>
                       }
                   }
@@ -52,4 +51,4 @@ class Info extends Component {
     }
 }
 
-export default withTranslation('common')(Info);
+export default withTranslation('common')(About);

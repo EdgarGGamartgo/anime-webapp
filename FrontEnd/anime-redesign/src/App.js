@@ -1,10 +1,14 @@
 import React from 'react';
-import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/login.component";
 import SignUp from "./components/signup.component";
 import Info from "./components/info.component";
+import About from "./components/about.component";
+import Contact from "./components/contact.component";
+import Animes from "./components/animes.component";
+
+
 import {useTranslation} from "react-i18next";
 
 function App() {
@@ -28,6 +32,17 @@ function App() {
              
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to={"/contact"}>{t('welcome.contact')}</Link>                
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/about"}>{t('welcome.about')}</Link>   
+             
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/gallery"}>Animes</Link>   
+             
+              </li>
+              <li className="nav-item">
                   <Link className="nav-link"  onClick={() => i18n.changeLanguage('es')}>Español</Link>
               </li>
               <li className="nav-item">
@@ -45,6 +60,9 @@ function App() {
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
             <Route path="/info-user" component={Info} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/about" component={About} />
+            <Route path="/gallery" component={Animes} />
           </Switch>
         </div>
       </div> 

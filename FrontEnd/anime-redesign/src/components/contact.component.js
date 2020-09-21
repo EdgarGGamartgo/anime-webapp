@@ -7,7 +7,7 @@ import './../index.css';
 
 
 
-class Info extends Component {
+class Contact extends Component {
 
     constructor(props) {
         super(props);
@@ -32,12 +32,8 @@ class Info extends Component {
                   {
                       (userInfo) => {
                       return <div>
-                                <div>{t('welcome.welcome')} {userInfo.user.name}</div>
-                                <div>{t('welcome.youremail')} {userInfo.user.email}</div>
-                                <div>{t('welcome.age')} {userInfo.user.age}</div>
-                                <form onSubmit={this.submitHandler}>
-                                     <button type="submit" className="btn btn-primary btn-block">{t('welcome.logout')}</button>
-                                </form>
+                                <div>{t('welcome.myemail')}</div>
+                                <div>{t('welcome.mynumber')}</div>
                              </div>
                       }
                   }
@@ -52,4 +48,4 @@ class Info extends Component {
     }
 }
 
-export default withTranslation('common')(Info);
+export default withTranslation('common')(Contact);

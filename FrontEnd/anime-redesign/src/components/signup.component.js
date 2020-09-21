@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from 'axios'
 import {withTranslation} from "react-i18next";
+import './../App.css';
+import './../index.css';
+
 
 class SignUp extends Component {
 
