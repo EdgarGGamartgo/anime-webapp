@@ -34,4 +34,11 @@ FRONT
 
 2. Dentro del mismo directorio ejecutar comando "npm start".
 
+AWS
+
+1. Se ha decidido implementar AWS RDS con instancia PostgreSQL para la
+capa de datos. Configuraciones y acceso a la Base de Datos se encuentra
+sobre el directorio AWS de este repositorio. 
+
+
 
