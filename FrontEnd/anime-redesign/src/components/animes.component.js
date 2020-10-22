@@ -8,6 +8,7 @@ import Action5 from './../assets/action5.jpg';
 import Drama1 from './../assets/drama1.jpeg';
 import Drama2 from './../assets/drama2.jpeg';
 import Psy1 from './../assets/psyco1.jpeg';
+import ShowByName from './ShowByName.js'
 
 import {withTranslation} from "react-i18next";
 import './../animeStyles.css'
@@ -21,8 +22,8 @@ class Animes extends Component {
             showAction: false,
             showDrama: false,
             showPsy: false,
-            showAll: true
-     
+            showAll: true,
+            title: ""
         };
     }
 
@@ -31,6 +32,7 @@ class Animes extends Component {
     filterSelection = e => {
         e.preventDefault()
         console.log("ANime genre: ", e.target.value)
+        this.setState({ title: "" })
         switch(e.target.value) {
             case "all":
                 console.log("My all")
@@ -73,12 +75,17 @@ class Animes extends Component {
         this.setState({ navigate: true })
     }
 
+    titleHandler = e => {
+        e.preventDefault()
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
     render() {
         const imgStyle = {
             width:'100px',
             heigh: '100px'
           };
-        const { navigate } = this.state
+        const { navigate, title } = this.state
         const { t } = this.props;
 
         if (this.state.showAll) {
@@ -92,10 +99,12 @@ class Animes extends Component {
       <button value="all" class="btn active" onClick={this.filterSelection} > Show all</button>
       <button value="drama" class="btn" onClick={this.filterSelection}> Drama</button>
       <button value="psy" class="btn" onClick={this.filterSelection}> Psychological</button>
-      <button value="action" class="btn" onClick={this.filterSelection}> Action</button>
+      <button value="action" class="btn" onClick={this.filterSelection}> Action </button>
+      <input type="text" name="title" placeholder="Filter by title" value={title} onChange={this.titleHandler} />
     </div>
     
     <div className="row">
+      {title ? <ShowByName name={title}/> : null}
       <div className="column action">
           {this.state.showAction ? 
           <div className="content">
