@@ -7,7 +7,7 @@ function Show(props) {
         width:'100px',
         heigh: '100px'
       };
-
+// Just another comment from myFeature branch
     return (
         <React.Fragment>
             <img src={Action1} alt={"Anime"} style={imgStyle}/>
